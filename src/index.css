@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*Basics*/
+.font-anton {
+    font-family: "Anton", sans-serif;
+    letter-spacing: 5px;
+}
+.font-arvo {
+    font-family: "Arvo", serif !important;
+}
+.font-open {
+    font-family: "Open Sans", sans-serif !important;
+}
+.font-title {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+   
+  }
+
+  
+  
+
+/*tailwind css*/
+@layer base{
+
+body{
+    @apply font-arvo bg-background
+}
+.overlay{
+    @apply fixed w-full h-full top-0 left-0 z-[100]
+}
+.overlay-black{
+
+    @apply bg-[#000000d4]
+
+}
+.overlay-gray{
+
+    @apply bg-[#a59f9fc4]
+
+}
+
+.main-title{
+    @apply relative mb-[80px] text-[30px] sm:text-[40px] font-semibold w-fit mx-auto
+    before:content-[""] before:absolute before:w-1/2 before:h-[1px] before:bg-black
+    before:left-1/2 before:-translate-x-1/2 before:-bottom-[10px]
+}
+
+
+}
+
+/*css*/
+html{
+    scroll-behavior: smooth;
+}
+.dashboard-icon{
+    background: #92278f;
+    background: linear-gradient(90deg, #92278f 0%, #5b0459 100%);
+    box-shadow: 1px 3px 4px 0 #ccc;
+}
+.hero{
+    height: calc(100vh - 100px);
+}
+.hero-image{
+    transition: 0.5s;
+    animation: up-down 1.7s infinite linear;
+}
+.box-shadow{
+    box-shadow: rgb(204, 204, 204) 0px 0px 19px 0px;
+}
+
+@keyframes up-down {
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+
+}
