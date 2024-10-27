@@ -1,8 +1,14 @@
+import logo from '../images/logo.jpg'
 
-
-const Logo = ({textStyle}) => {
+const Logo = ({textStyle,width}) => {
   return (
-    <span className={`${textStyle} text-main font-title`}>InnoTech</span>
+
+    <div>
+
+      <img className={`${width}`} src={logo} alt="logo" />
+      {/* <span className={`${textStyle} text-main font-open text-center`}>InnoTech</span> */}
+
+    </div>
   )
 }
 

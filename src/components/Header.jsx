@@ -11,7 +11,9 @@ const ButtonEmail = ({email})=>(
   <a
        className='grid place-items-center w-[200px] h-[60px] bg-main hover:bg-bold duration-500 text-white rounded-[6px] border font-semibold uppercase'
         href={`mailto:${email}`}
-        target='_blank'>
+        target='_blank'
+        rel="noreferrer"
+        >
           Contact us
   </a>
 
@@ -24,10 +26,10 @@ const Header = () => {
 
 
   return (
-    <div className='sticky top-0 z-[11] flex justify-between items-center py-[15px] px-[50px] bg-white border-b h-[100px]'>
+    <div className='sticky top-0 z-[11] flex justify-between items-center py-[15px] px-[50px] bg-white border-b h-[120px]'>
       
       <a href="#">
-        <Logo textStyle="text-[35px] sm:text-[50px]" />
+        <Logo width="w-[80px]" />
       </a>
 
       <ul className={`duration-500 fixed top-0 ${showList ? 'left-0' : '-left-full'}
@@ -36,7 +38,7 @@ const Header = () => {
        lg:bg-transparent lg:text-[18px] lg:font-normal
          flex flex-col lg:flex-row justify-center items-center gap-[30px] font-open`}>
 
-          <MdClose onClick={()=>setShowList(false)} className='text-white absolute top-[20px] right-[20px] text-[50px] cursor-pointer' />
+          <MdClose onClick={()=>setShowList(false)} className='lg:hidden text-white absolute top-[20px] right-[20px] text-[50px] cursor-pointer' />
         <li onClick={()=>setShowList(false)}><a href="#">Home</a></li>
         <li onClick={()=>setShowList(false)}><a href="#about">About Us</a></li>
         <li onClick={()=>setShowList(false)}><a href="#services">Services</a></li>
